@@ -11,7 +11,7 @@
               <form class="user" method="post" action="<?= base_url('auth/registration'); ?>">
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Full Name" value="<?= set_value('name'); ?>">
-                    <?= form_error('name','<small class="text-danger pl-3">','</small>'); ?>                  
+                  <?= form_error('name','<small class="text-danger pl-3">','</small>'); ?>                  
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address" value="<?= set_value('email'); ?>">

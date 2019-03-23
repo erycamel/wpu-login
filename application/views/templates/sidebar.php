@@ -46,12 +46,16 @@
         $submenu = $this->db->query($querysubmenu)->result_array();
       ?>
         <?php foreach ($submenu as $sm) : ?>
+        <?php if($title == $sm['title']) : ?>
+          <li class="nav-item active">
+          <?php else : ?>
           <li class="nav-item">
+          <?php endif; ?>
             <a class="nav-link" href="<?= base_url($sm['url']); ?>">
-              <i class="<?= $sm['icon'] ?>"></i>
-              <span><?= $sm['title'] ?></span></a>
-          </li>
-        <?php endforeach; ?>
+            <i class="<?= $sm['icon'] ?>"></i>
+            <span><?= $sm['title'] ?></span></a>
+          </li>          
+        <?php endforeach; ?>        
         <!-- Divider -->
         <hr class="sidebar-divider">
       <?php endforeach; ?>
