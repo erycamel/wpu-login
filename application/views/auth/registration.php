@@ -24,6 +24,7 @@
                   </div>
                   <div class="col-sm-6">
                     <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Repeat Password">
+                    <?= form_error('password2','<small class="text-danger pl-3">','</small>'); ?> 
                   </div>
                 </div>
                 <hr>
@@ -33,7 +34,7 @@
               </form>
               <hr>
               <div class="text-center">
-                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                <a class="small" href="<?= base_url('auth/forgotpassword'); ?>">Forgot Password?</a>
               </div>
               <div class="text-center">
                 <a class="small" href="<?= base_url('auth'); ?>">Already have an account? Login!</a>
